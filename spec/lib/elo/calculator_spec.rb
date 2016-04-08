@@ -30,6 +30,15 @@ describe Elo::Calculator do
     end
   end
 
+  describe ".we" do
+    it "calculates correctly" do
+      expect(calculator.we(630, 500)).to eq(0.679)
+      expect(calculator.we(500, 630)).to eq(0.321)
+      expect(calculator.we(500, 480)).to eq(0.529)
+      expect(calculator.we(480, 500)).to eq(0.471)
+    end
+  end
+
   describe ".g" do
     it "is 1 for draws" do
       expect(calculator.g(1, 1)).to eq(1.0)

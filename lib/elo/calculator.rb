@@ -10,8 +10,10 @@ module Elo
         weight * g(score1, score2) * (w(score1, score2) - we(pts1, pts2))
       end
 
+      # 1/(10^-(dr/400) + 1)
+      # dr = difference in ratings
       def we pts1, pts2
-
+        (1 / ( 10 ** ( - (pts1 - pts2) / 400.0) + 1)).round(3)
       end
 
       def w score1, score2
