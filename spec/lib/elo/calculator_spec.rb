@@ -10,6 +10,26 @@ describe Elo::Calculator do
     end
   end
 
+  describe ".w" do
+    it "is 1 for a win" do
+      expect(calculator.w(1, 0)).to eq(1)
+      expect(calculator.w(4, 2)).to eq(1)
+      expect(calculator.w(9, 8)).to eq(1)
+    end
+
+    it "is .5 for a draw" do
+      expect(calculator.w(0, 0)).to eq(0.5)
+      expect(calculator.w(8, 8)).to eq(0.5)
+      expect(calculator.w(2, 2)).to eq(0.5)
+    end
+
+    it "is 0 for a loss" do
+      expect(calculator.w(0, 10)).to eq(0)
+      expect(calculator.w(6, 10)).to eq(0)
+      expect(calculator.w(4, 5)).to eq(0)
+    end
+  end
+
   describe ".g" do
     it "is 1 for draws" do
       expect(calculator.g(1, 1)).to eq(1.0)
