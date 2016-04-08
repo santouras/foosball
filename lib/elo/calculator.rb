@@ -15,7 +15,14 @@ module Elo
       end
 
       def w score1, score2
-
+        case score1 <=> score2
+        when 1
+          1
+        when 0
+          0.5
+        when -1
+          0
+        end
       end
 
       # goal difference
