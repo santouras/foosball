@@ -7,7 +7,7 @@ module Elo
       # w = result
       # we = expected result
       def p pts1, pts2, score1, score2, weight
-        weight * g(score1, score2) * (w(score1, score2) - we(pts1, pts2))
+        (weight * g(score1, score2) * (w(score1, score2) - we(pts1, pts2))).round(2)
       end
 
       # 1/(10^-(dr/400) + 1)
