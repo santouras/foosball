@@ -13,14 +13,14 @@ Because, sometimes they won't.
 I'm afraid that some times
 you'll play lonely games too.
 Games you can't win
-'cause you'll play against you.” 
+'cause you'll play against you.”
 
 ― Dr. Seuss, Oh, The Places You'll Go!
 
 >“Take someone who doesn't keep score,
 who's not looking to be richer, or afraid of losing,
 who has not the slightest interest even
-in his own personality: he's free.” 
+in his own personality: he's free.”
 
 ― Rumi
 
@@ -62,7 +62,7 @@ This app was created and tested in Rails 4.2.6.
 
 TBC
 
-## Contributing 
+## Contributing
 
 TBC
 
@@ -73,8 +73,3 @@ TBC
 ## License
 
 TBC
-
-
-
-
-
