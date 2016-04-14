@@ -11,7 +11,12 @@ describe Elo::Calculator do
   end
 
   describe ".p" do
-    [{ args: [630, 500, 3, 1, 20], result: 9.63 }].each do |params|
+    [{ args: [630, 500, 3, 1, 20], result: 9.63 },
+     { args: [630, 500, 1, 3, 20], result: -20.37 },
+     { args: [630, 500, 2, 2, 20], result: -3.58 },
+     { args: [500, 480, 3, 1, 20], result: 14.13 },
+     { args: [500, 480, 1, 3, 20], result: -15.87 },
+     { args: [500, 480, 2, 2, 20], result: -0.58 }].each do |params|
       include_examples "calculates", "calculates correctly", :p, params[:args], params[:result]
     end
   end
