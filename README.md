@@ -40,15 +40,17 @@ This Rails app applies the World Football Elo Ratings ranking system to games of
 
 For a complete guide to Elo Ratings, visit [the Wikipedia page here](https://en.m.wikipedia.org/wiki/World_Football_Elo_Ratings), but the basic calculation is as follows:
 
->P = KG(W - We)
+>P = KG(W - W_e)
 
 where:
 
-P = points change
-K = weight index (depending on the type of match, tournament, world cup, friendly)
-G = a number based on the index of goal differences
-W = the result of the match
-We = the expected result of the match
+| value | description |
+| --- | --- |
+| P | points change |
+| K | weight index (depending on the type of match, tournament, world cup, friendly) |
+| G | a number based on the index of goal differences |
+| W | the result of the match |
+| W_e | the expected result of the match |
 
 ## Getting Started
 
