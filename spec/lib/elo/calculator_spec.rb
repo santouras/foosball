@@ -11,10 +11,10 @@ describe Elo::Calculator do
   end
 
   describe ".p" do
-    [{ args: [630, 500, 2, 2, 20], result: -3.58 },
-     { args: [420, 0, 6, 9, 20], result: -32.13 },
-     { args: [630, 500, 1, 3, 20], result: -20.37 },
-     { args: [630, 500, 3, 1, 20], result: 9.63 }].each do |params|
+    [{ args: [630, 500, 2, 2, :friendly], result: -3.58 },
+     { args: [420, 0, 6, 9, :friendly], result: -32.13 },
+     { args: [630, 500, 1, 3, :friendly], result: -20.37 },
+     { args: [630, 500, 3, 1, :friendly], result: 9.63 }].each do |params|
      include_examples "calculates", "calculates correctly", :p, params[:args], params[:result]
     end
   end
@@ -59,6 +59,19 @@ describe Elo::Calculator do
      { args: [7, 0],   result: 2.25 },
      { args: [30, 40], result: 2.625 }].each do |params|
       include_examples "calculates", "is (11 + difference)/8 when +3 or higher", :g, params[:args], params[:result]
+    end
+  end
+
+  describe ".k" do
+    [{ args: ["world_cup"], result: 60 },
+    { args: ["continental_championship"], result: 50 },
+    { args: ["intercontinental_tournament"], result: 50 },
+    { args: ["world_cup_qualifier"], result: 40 },
+    { args: ["continental_qualifier"], result: 40 },
+    { args: ["major_tournament"], result: 40 },
+    { args: ["other_tournament"], result: 30 },
+    { args: ["friendly"], result: 20 }].each do |params|
+     include_examples "calculates", "is the correct weight", :k, params[:args], params[:result]
     end
   end
 end

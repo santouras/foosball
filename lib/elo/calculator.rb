@@ -1,13 +1,25 @@
 module Elo
   class Calculator
     class << self
+
+      MATCH_TYPE = {
+        world_cup: 60,
+        continental_championship: 50,
+        intercontinental_tournament: 50,
+        world_cup_qualifier: 40,
+        continental_qualifier: 40,
+        major_tournament: 40,
+        other_tournament: 30,
+        friendly: 20
+      }
+
       # kg(w - we)
       # k = weight index
       # g = goal difference
       # w = result
       # we = expected result
-      def p pts1, pts2, score1, score2, weight
-        (weight * g(score1, score2) * (w(score1, score2) - we(pts1, pts2))).round(2)
+      def p pts1, pts2, score1, score2, match_type
+        (k(match_type) * g(score1, score2) * (w(score1, score2) - we(pts1, pts2))).round(2)
       end
 
       # 1/(10^-(dr/400) + 1)
@@ -47,6 +59,11 @@ module Elo
         diff = score1 - score2
         diff *= -1 if diff < 0
         diff
+      end
+
+      def k match_type
+        match_type = :friendly unless MATCH_TYPE.key? match_type.to_sym
+        MATCH_TYPE[match_type.to_sym]
       end
     end
   end
