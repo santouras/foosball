@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/santouras/foosball.svg?branch=master)](https://travis-ci.org/santouras/foosball)
+
 # Foosball Elo Ranking App
 
 >“Oh, the places you'll go! There is fun to be done!
