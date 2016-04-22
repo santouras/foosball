@@ -13,6 +13,12 @@ module Elo
         friendly: 20
       }
 
+      RESULT_INDEX = {
+        "1" => 1,
+        "0" => 0.5,
+        "-1" => 0
+      }
+
       # kg(w - we)
       # k = weight index
       # g = goal difference
@@ -29,14 +35,7 @@ module Elo
       end
 
       def w score1, score2
-        case score1 <=> score2
-        when 1
-          1
-        when 0
-          0.5
-        when -1
-          0
-        end
+        RESULT_INDEX[(score1 <=> score2).to_s]
       end
 
       # goal difference
