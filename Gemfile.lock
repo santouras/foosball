@@ -46,6 +46,12 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.6.0)
+    factory_girl (4.7.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.7.0)
+      factory_girl (~> 4.7.0)
+      railties (>= 3.0.0)
+    ffaker (2.2.0)
     ffi (1.9.10)
     formatador (0.2.5)
     globalid (0.3.6)
@@ -192,6 +198,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  factory_girl_rails
+  ffaker
   guard
   guard-rspec
   jbuilder (~> 2.0)
@@ -207,4 +215,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.10.6
+   1.11.2

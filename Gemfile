@@ -28,6 +28,12 @@ group :development, :test do
   gem 'pry-highlight'
 
   gem 'rspec-rails', '~> 3.0'
+
+  gem 'ffaker'
+end
+
+group :test do
+  gem 'factory_girl_rails'
 end
 
 group :development do
