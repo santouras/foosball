@@ -13,24 +13,24 @@ Because, sometimes they won't.
 I'm afraid that some times
 you'll play lonely games too.
 Games you can't win
-'cause you'll play against you.” 
+'cause you'll play against you.”
 
 ― Dr. Seuss, Oh, The Places You'll Go!
 
 >“Take someone who doesn't keep score,
 who's not looking to be richer, or afraid of losing,
 who has not the slightest interest even
-in his own personality: he's free.” 
+in his own personality: he's free.”
 
 ― Rumi
 
 >Shut up, Rumi.
 
-- Adam Roberts
+― Adam Roberts
 
 >The question is not whether we are able to change but whether we are changing fast enough.
 
-- Angela Merkel
+― Angela Merkel
 
 ## Summary
 
@@ -40,15 +40,17 @@ This Rails app applies the World Football Elo Ratings ranking system to games of
 
 For a complete guide to Elo Ratings, visit [the Wikipedia page here](https://en.m.wikipedia.org/wiki/World_Football_Elo_Ratings), but the basic calculation is as follows:
 
->P = KG(W - We)
+>P = KG(W - W_e)
 
 where:
 
-P = points change
-K = weight index (depending on the type of match, tournament, world cup, friendly)
-G = a number based on the index of goal differences
-W = the result of the match
-We = the expected result of the match
+| value | description |
+| --- | --- |
+| P | points change |
+| K | weight index (depending on the type of match, tournament, world cup, friendly) |
+| G | a number based on the index of goal differences |
+| W | the result of the match |
+| W_e | the expected result of the match |
 
 ## Getting Started
 
@@ -62,7 +64,7 @@ This app was created and tested in Rails 4.2.6.
 
 TBC
 
-## Contributing 
+## Contributing
 
 TBC
 
@@ -73,8 +75,3 @@ TBC
 ## License
 
 TBC
-
-
-
-
-
