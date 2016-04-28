@@ -26,11 +26,11 @@ in his own personality: he's free.”
 
 >Shut up, Rumi.
 
-- Adam Roberts
+― Adam Roberts
 
 >The question is not whether we are able to change but whether we are changing fast enough.
 
-- Angela Merkel
+― Angela Merkel
 
 ## Summary
 
