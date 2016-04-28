@@ -94,6 +94,11 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-highlight (0.1.0)
+      coderay
+      json
+      nokogiri
+      pry
     pry-rails (0.3.4)
       pry (>= 0.9.10)
     rack (1.6.4)
@@ -191,6 +196,7 @@ DEPENDENCIES
   guard-rspec
   jbuilder (~> 2.0)
   pry
+  pry-highlight
   pry-rails
   rails (= 4.2.6)
   rspec-rails (~> 3.0)
