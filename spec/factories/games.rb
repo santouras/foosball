@@ -6,5 +6,6 @@ FactoryGirl.define do
     score_user2 9
     points 10
     game_time { Time.current.utc }
+    match_type :friendly
   end
 end
