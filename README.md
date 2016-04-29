@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/santouras/foosball.svg?branch=master)](https://travis-ci.org/santouras/foosball)
+[![Dependency Status](https://gemnasium.com/badges/github.com/santouras/foosball.svg)](https://gemnasium.com/github.com/santouras/foosball)
 
 # Foosball Elo Ranking App
 
