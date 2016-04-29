@@ -20,7 +20,7 @@ class Game < ActiveRecord::Base
   before_save :set_points
 
   def calculate_points
-    self.points = Elo::Calculator.p(
+    Elo::Calculator.p(
       user1.points,
       user2.points,
       score_user1,
