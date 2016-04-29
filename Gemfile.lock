@@ -46,6 +46,12 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.6.0)
+    factory_girl (4.7.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.7.0)
+      factory_girl (~> 4.7.0)
+      railties (>= 3.0.0)
+    ffaker (2.2.0)
     ffi (1.9.10)
     formatador (0.2.5)
     globalid (0.3.6)
@@ -94,6 +100,11 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-highlight (0.1.0)
+      coderay
+      json
+      nokogiri
+      pry
     pry-rails (0.3.4)
       pry (>= 0.9.10)
     rack (1.6.4)
@@ -187,10 +198,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  factory_girl_rails
+  ffaker
   guard
   guard-rspec
   jbuilder (~> 2.0)
   pry
+  pry-highlight
   pry-rails
   rails (= 4.2.6)
   rspec-rails (~> 3.0)
@@ -201,4 +215,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.10.6
+   1.11.2
