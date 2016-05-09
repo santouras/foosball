@@ -47,4 +47,3 @@ group :development do
   gem 'guard-rubocop'
   gem 'rubocop-rspec'
 end
-

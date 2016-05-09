@@ -14,7 +14,7 @@ class Game < ActiveRecord::Base
   validate :ensure_winning_score
 
   # store
-  store :meta, accessors: [ :match_type ]
+  store :meta, accessors: [:match_type]
 
   # hooks
   before_save :set_points
@@ -37,10 +37,10 @@ class Game < ActiveRecord::Base
 
   # validation methods
   def ensure_distinct_users
-    errors.add(:user1, "Users must be distinct") if user1 == user2
+    errors.add(:user1, 'Users must be distinct') if user1 == user2
   end
 
   def ensure_winning_score
-    errors.add(:score_user1, "Must be a winning score") if score_user1 == score_user2
+    errors.add(:score_user1, 'Must be a winning score') if score_user1 == score_user2
   end
 end
