@@ -1,12 +1,21 @@
 inherit_from: .rubocop_todo.yml
 require: rubocop-rspec
 
+Metrics/LineLength:
+  Enabled: false
+
+Style/BlockComments:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
 AllCops:
   Include:
     - '**/Rakefile'
     - '**/config.ru'
   Exclude:
+    - 'vendor/**/*'
     - 'db/**/*'
-    - 'config/**/*'
-    - 'script/**/*'
+    - 'bin/**/*'
     - !ruby/regexp /old_and_unused\.rb$/
