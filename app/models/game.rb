@@ -12,6 +12,7 @@ class Game < ActiveRecord::Base
   validates :score_user2, numericality: true
   validate :ensure_distinct_users
   validate :ensure_winning_score
+  validates :match_type, presence: true
 
   # store
   store :meta, accessors: [ :match_type ]
