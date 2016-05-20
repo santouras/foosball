@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20160520051319) do
     t.float    "points"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "nickname"
   end
 
 end
