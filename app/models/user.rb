@@ -8,4 +8,12 @@ class User < ActiveRecord::Base
   def games
     Game.where('user1_id = :id OR user2_id = :id', id: id)
   end
+
+  def display_name
+    nickname || full_name
+  end
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 end
