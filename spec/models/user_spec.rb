@@ -10,6 +10,7 @@ describe User, type: :model do
       user.update_attributes(
         first_name: FFaker::Name.first_name,
         last_name: FFaker::Name.last_name,
+        email: FFaker::Internet.email,
         points: 500
       )
 
