@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'rails_helper'
 
 describe Game, type: :model do
@@ -6,17 +7,31 @@ describe Game, type: :model do
   let(:game) { create(:game) }
   let(:user1) { create(:user) }
   let(:user2) { create(:user) }
+  let(:update_attr) do
+    {
+      user1: user1,
+      user2: user2,
+      score_user1: 10,
+      score_user2: 9,
+      match_type: :friendly
+    }
+  end
+  let(:calculate_args) do
+    [
+      user1.points,
+      user2.points,
+      game.score_user1,
+      game.score_user2,
+      game.match_type
+    ]
+  end
 
   describe 'validations' do
     it { is_expected.not_to be_valid }
 
     it 'is valid when filled in' do
       object.update_attributes(
-        user1: user1,
-        user2: user2,
-        score_user1: 10,
-        score_user2: 9,
-        match_type: :friendly
+        update_attr
       )
 
       expect(object).to be_valid
@@ -59,13 +74,7 @@ describe Game, type: :model do
 
     it 'calls Elo::Calculator' do
       expect(Elo::Calculator).to receive(:p)
-        .with(
-          user1.points,
-          user2.points,
-          game.score_user1,
-          game.score_user2,
-          game.match_type
-        )
+        .with(*calculate_args)
 
       game.calculate_points
     end

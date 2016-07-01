@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Elo
   class Calculator
     class << self
