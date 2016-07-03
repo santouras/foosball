@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 require 'elo/calculator'
 
-class Game < ActiveRecord::Base
+class Game < ApplicationRecord
   # relations
   belongs_to :user1, class_name: 'User'
   belongs_to :user2, class_name: 'User'
