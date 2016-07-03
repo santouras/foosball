@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   # validations
   validates :first_name, presence: true
   validates :last_name, presence: true
