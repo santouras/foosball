@@ -22,6 +22,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# GraphQL
+gem 'graphql'
+
 group :development, :test do
   gem 'pry'
   gem 'pry-rails'
@@ -37,6 +40,9 @@ group :test do
 end
 
 group :development do
+  # GraphiQL Browser
+  gem 'graphiql-rails'
+
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 

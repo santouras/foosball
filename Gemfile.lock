@@ -59,6 +59,9 @@ GEM
     formatador (0.2.5)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    graphiql-rails (1.2.0)
+      rails
+    graphql (0.15.3)
     guard (2.14.0)
       formatador (>= 0.2.4)
       listen (>= 2.7, < 4.0)
@@ -227,6 +230,8 @@ PLATFORMS
 DEPENDENCIES
   factory_girl_rails
   ffaker
+  graphiql-rails
+  graphql
   guard
   guard-rspec
   guard-rubocop
