@@ -2,7 +2,7 @@ language: ruby
 env:
   - RAILS_ENV=test
 script:
-  - bundle exec rake db:setup && bundle exec rake db:migrate
+  - bin/rails db:migrate RAILS_ENV=test
   - bundle exec rspec spec
   - bundle exec rubocop
 notifications:
