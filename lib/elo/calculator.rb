@@ -56,7 +56,7 @@ module Elo
 
       def score_difference(score1, score2)
         diff = score1 - score2
-        diff *= -1 if diff < 0
+        diff *= -1 if diff.negative?
         diff
       end
 
